@@ -6,6 +6,7 @@ namespace CarLotSimulator
     {
         static void Main(string[] args)
         {
+            var carLotOne = new CarLot();
             //TODO
 
             //Create a seperate class file called Car
@@ -17,6 +18,42 @@ namespace CarLotSimulator
             //Now that the Car class is created we can instanciate 3 new cars
             //Set the properties for each of the cars
             //Call each of the methods for each car
+            
+            //DotNotation
+            var carOne = new Car();
+            carOne.Make = "Chevrolet";
+            carOne.Model = "Chevelle";
+            carOne.Year = 1970;
+            carOne.EngineNoise = "knocking";
+            carOne.HonkNoise = "very loud";
+            carOne.IsDriveable = true;
+            
+            carLotOne.ParkingLot.Add(carOne);
+            
+            //ObjectInitializer
+            var carTwo = new Car()
+            {
+                Make = "Plymouth",
+                Model = "Hemicude",
+                Year = 1971,
+                EngineNoise = "Bump",
+                HonkNoise = "beep",
+                IsDriveable = true
+            };
+                
+                carLotOne.ParkingLot.Add(carTwo);
+
+                var carThree = new Car()
+
+                {
+                    Make = "Chevrolet",
+                    Model = "Silverado",
+                    Year = 1974,
+                    EngineNoise = "Bump",
+                    HonkNoise = "beep",
+                    IsDriveable = true
+                };
+            carLotOne.ParkingLot.Add(carThree);
 
             //*************BONUS*************//
 
