@@ -24,9 +24,10 @@ namespace CarLotSimulator
             carOne.Make = "Chevrolet";
             carOne.Model = "Chevelle";
             carOne.Year = 1970;
-            carOne.EngineNoise = "knocking";
-            carOne.HonkNoise = "very loud";
             carOne.IsDriveable = true;
+            
+            carOne.MakeEngineNoise("Vroom");
+            carOne.MakeHonkNoise("Honk");
             
             carLotOne.ParkingLot.Add(carOne);
             
@@ -34,25 +35,21 @@ namespace CarLotSimulator
             var carTwo = new Car()
             {
                 Make = "Plymouth",
-                Model = "Hemicude",
+                Model = "Hemicuda",
                 Year = 1971,
-                EngineNoise = "Bump",
-                HonkNoise = "beep",
                 IsDriveable = true
             };
-                
+            
+            carTwo.MakeEngineNoise("Vroomity");
+            carTwo.MakeHonkNoise("Honkity");
+            
                 carLotOne.ParkingLot.Add(carTwo);
 
-                var carThree = new Car()
+                var carThree = new Car("Chevrolet", "silverado", 1974, true);
 
-                {
-                    Make = "Chevrolet",
-                    Model = "Silverado",
-                    Year = 1974,
-                    EngineNoise = "Bump",
-                    HonkNoise = "beep",
-                    IsDriveable = true
-                };
+                carThree.MakeEngineNoise("Vroomity yikes");
+                carThree.MakeHonkNoise("Honkity oops");
+                
             carLotOne.ParkingLot.Add(carThree);
 
             //*************BONUS*************//
