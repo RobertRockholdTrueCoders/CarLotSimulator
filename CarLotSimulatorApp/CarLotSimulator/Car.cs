@@ -27,8 +27,10 @@ public class Car
 
     public Car()
     {
-        
+        CarLot._numberOfCars++;
     }
+    
+    
     
     public Car(string make, string model, int year, bool isDriveable)
     {

@@ -10,7 +10,7 @@ public class CarLot
     {
     }
 
-    public static int _numberOfCars;
+    public static int _numberOfCars = 1;
     public List<Car> ParkingLot { get; set; } = new List<Car>();
 
     public void CheckCars()
